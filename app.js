@@ -43,8 +43,10 @@ function deleteCheck(e){
         const todo=item.parentElement;
         //Animation
         todo.classList.add('fall');
-        todo.addEventListener('transitioned', function(){})
-        // todo.remove();
+        todo.addEventListener('transitionend', function(){
+             todo.remove();
+        });
+        
     }
     //CHECK MARK
     if(item.classList[0]==="complete-button"){
